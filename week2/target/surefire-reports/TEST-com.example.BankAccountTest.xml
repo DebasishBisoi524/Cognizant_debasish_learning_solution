@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.BankAccountTest" time="0.003" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.BankAccountTest" time="0.013" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\KIIT\AppData\Local\Temp\surefire12626693490370172615\surefirebooter-20250704234513965_3.jar C:\Users\KIIT\AppData\Local\Temp\surefire12626693490370172615 2025-07-04T23-45-13_619-jvmRun1 surefire-20250704234513965_1tmp surefire_0-20250704234513965_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\KIIT\AppData\Local\Temp\surefire2834715989416950688\surefirebooter-20250704235225636_3.jar C:\Users\KIIT\AppData\Local\Temp\surefire2834715989416950688 2025-07-04T23-52-25_402-jvmRun1 surefire-20250704235225636_1tmp surefire_0-20250704235225636_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\target\test-classes;C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\target\classes;C:\Users\KIIT\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\KIIT\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\KIIT\AppData\Local\Temp\surefire12626693490370172615\surefirebooter-20250704234513965_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\KIIT\AppData\Local\Temp\surefire2834715989416950688\surefirebooter-20250704235225636_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.1+8-16"/>
@@ -58,7 +58,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="testWithdrawMoreThanBalance" classname="com.example.BankAccountTest" time="0.0"/>
-  <testcase name="testWithdrawValid" classname="com.example.BankAccountTest" time="0.0"/>
-  <testcase name="testDeposit" classname="com.example.BankAccountTest" time="0.0"/>
+  <testcase name="testWithdrawInsufficientFunds" classname="com.example.BankAccountTest" time="0.006">
+    <system-out><![CDATA[Setup: BankAccount initialized with 1000
+Teardown: BankAccount object cleared
+]]></system-out>
+  </testcase>
+  <testcase name="testWithdrawValid" classname="com.example.BankAccountTest" time="0.004">
+    <system-out><![CDATA[Setup: BankAccount initialized with 1000
+Teardown: BankAccount object cleared
+]]></system-out>
+  </testcase>
+  <testcase name="testDeposit" classname="com.example.BankAccountTest" time="0.001">
+    <system-out><![CDATA[Setup: BankAccount initialized with 1000
+Teardown: BankAccount object cleared
+]]></system-out>
+  </testcase>
 </testsuite>
