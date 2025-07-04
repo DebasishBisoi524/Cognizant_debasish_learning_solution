@@ -1,0 +1,57 @@
+Scenario 1: Apply 1% Discount for Seniors
+DECLARE
+    CURSOR cust_cursor IS
+        SELECT customer_id, interest_rate, age
+        FROM customers;
+
+BEGIN
+    FOR cust IN cust_cursor LOOP
+        -- Check if customer is a senior
+        IF cust.age > 60 THEN
+            -- Apply 1% discount to current interest rate
+            UPDATE customers
+            SET interest_rate = interest_rate - 1
+            WHERE customer_id = cust.customer_id;
+        END IF;
+    END LOOP;
+
+    COMMIT; -- Save all updates
+END;
+
+
+Scenario 2: Promote to VIP Based on Balance
+DECLARE
+    CURSOR vip_cursor IS
+        SELECT customer_id, balance
+        FROM customers;
+
+BEGIN
+    FOR cust IN vip_cursor LOOP
+        IF cust.balance > 10000 THEN
+            -- Mark this customer as VIP
+            UPDATE customers
+            SET isvip = TRUE
+            WHERE customer_id = cust.customer_id;
+        END IF;
+    END LOOP;
+
+    COMMIT;
+END;
+
+
+Scenario 3: Send Loan Reminder
+DECLARE
+    CURSOR due_loan_cursor IS
+        SELECT l.loan_id, l.customer_id, l.due_date, c.name
+        FROM loans l
+        JOIN customers c ON l.customer_id = c.customer_id
+        WHERE l.due_date BETWEEN SYSDATE AND SYSDATE + 30;
+
+BEGIN
+    FOR loan_rec IN due_loan_cursor LOOP
+        -- Print reminder message
+        DBMS_OUTPUT.PUT_LINE('Reminder: Dear ' || loan_rec.name || 
+            ', your loan (ID: ' || loan_rec.loan_id || 
+            ') is due on ' || TO_CHAR(loan_rec.due_date, 'DD-MON-YYYY'));
+    END LOOP;
+END;

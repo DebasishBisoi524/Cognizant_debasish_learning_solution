@@ -1,0 +1,70 @@
+Scenario 1: Monthly Interest for Savings Accounts
+
+CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest IS
+    CURSOR savings_cursor IS
+        SELECT account_id, balance
+        FROM accounts
+        WHERE account_type = 'SAVINGS';
+
+BEGIN
+    FOR acc IN savings_cursor LOOP
+        -- Calculate new balance with 1% interest
+        UPDATE accounts
+        SET balance = acc.balance + (acc.balance * 0.01)
+        WHERE account_id = acc.account_id;
+    END LOOP;
+
+    COMMIT; -- Apply all balance updates
+END;
+
+Scenario 2: Update Employee Bonus by Department
+
+CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (
+    p_dept_id IN NUMBER,
+    p_bonus_percent IN NUMBER
+) IS
+BEGIN
+    -- Apply bonus to salaries in the given department
+    UPDATE employees
+    SET salary = salary + (salary * (p_bonus_percent / 100))
+    WHERE department_id = p_dept_id;
+
+    COMMIT; -- Save changes
+END;
+
+Scenario 3: Fund Transfer Between Accounts
+
+CREATE OR REPLACE PROCEDURE TransferFunds (
+    p_from_account IN NUMBER,
+    p_to_account IN NUMBER,
+    p_amount IN NUMBER
+) IS
+    v_balance NUMBER;
+
+BEGIN
+    -- Check if source account has enough funds
+    SELECT balance INTO v_balance
+    FROM accounts
+    WHERE account_id = p_from_account;
+
+    IF v_balance < p_amount THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Insufficient funds in source account.');
+    END IF;
+
+    -- Deduct from source
+    UPDATE accounts
+    SET balance = balance - p_amount
+    WHERE account_id = p_from_account;
+
+    -- Add to destination
+    UPDATE accounts
+    SET balance = balance + p_amount
+    WHERE account_id = p_to_account;
+
+    COMMIT;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK; -- Rollback in case of error
+        RAISE;    -- Re-raise the error
+END;
