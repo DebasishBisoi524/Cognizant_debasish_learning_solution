@@ -1,0 +1,6 @@
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\bin\Debug\CalcLibrary.dll
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\bin\Debug\CalcLibrary.pdb
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\obj\Debug\CalcLibrary.csproj.AssemblyReference.cache
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\obj\Debug\CalcLibrary.csproj.CoreCompileInputs.cache
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\obj\Debug\CalcLibrary.dll
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week2\CalcLibrary\CalcLibrary\obj\Debug\CalcLibrary.pdb
