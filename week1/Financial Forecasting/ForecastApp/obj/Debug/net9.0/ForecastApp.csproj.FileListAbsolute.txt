@@ -1,0 +1,15 @@
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\bin\Debug\net9.0\ForecastApp.exe
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\bin\Debug\net9.0\ForecastApp.deps.json
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\bin\Debug\net9.0\ForecastApp.runtimeconfig.json
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\bin\Debug\net9.0\ForecastApp.dll
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\bin\Debug\net9.0\ForecastApp.pdb
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.AssemblyInfoInputs.cache
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.AssemblyInfo.cs
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.csproj.CoreCompileInputs.cache
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.sourcelink.json
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.dll
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\refint\ForecastApp.dll
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.pdb
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ForecastApp.genruntimeconfig.cache
+C:\Users\KIIT\Desktop\Placement\Cognizant\Cognizant_debasish_learning_solution\week1\Financial Forecasting\ForecastApp\obj\Debug\net9.0\ref\ForecastApp.dll
