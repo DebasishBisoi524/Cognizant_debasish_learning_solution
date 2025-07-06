@@ -3,34 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace RetailInventory
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            using var context = new RetailDbContext();
+            // Load configuration from appsettings.json
+            var config = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory) // Ensures it finds appsettings.json after build
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
 
-            // Check if data already exists
-            if (!context.Categories.Any())
+            var connectionString = config.GetConnectionString("DefaultConnection");
+
+            using var context = new AppDbContext(connectionString);
+
+            try
             {
-                var category = new Category { Name = "Electronics" };
-                var product = new Product { Name = "Laptop", Stock = 15, Category = category };
-
-                context.Categories.Add(category);
-                context.Products.Add(product);
-                context.SaveChanges();
-
-                Console.WriteLine("Sample data inserted successfully!");
-            }
-            else
-            {
-                Console.WriteLine("Data already exists:");
-                foreach (var product in context.Products)
+                // Insert sample data if not already present
+                if (!context.Categories.Any())
                 {
-                    Console.WriteLine($"- {product.Name} ({product.Stock} in stock)");
+                    var category = new Category { Name = "Groceries" };
+                    var product = new Product
+                    {
+                        Name = "Rice",
+                        Price = 89.99m,
+                        Category = category
+                    };
+
+                    context.Categories.Add(category);
+                    context.Products.Add(product);
+                    context.SaveChanges();
+
+                    Console.WriteLine("Sample data inserted!");
                 }
+                else
+                {
+                    Console.WriteLine("Data already exists:");
+                    foreach (var product in context.Products)
+                    {
+                        Console.WriteLine($"- {product.Name} (₹{product.Price})");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error: {ex.Message}");
             }
         }
     }
